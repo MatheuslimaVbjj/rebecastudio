@@ -1,79 +1,56 @@
-# ATLÂNTICO STUDIO — Site institucional premium
+# ATLÂNTICO STUDIO
 
-Pacote pronto para publicar no GitHub Pages.
+Site institucional do ATLÂNTICO STUDIO, reconstruído com Next.js, TypeScript e Tailwind CSS. A aplicação foi preparada para publicação automática na Vercel, SEO técnico e manutenção por componentes.
+
+## Stack
+
+- Next.js 16 com App Router
+- React 19 e TypeScript
+- Tailwind CSS 4
+- Formspree para recebimento do briefing
+- Google Analytics opcional por variável de ambiente
+
+## Desenvolvimento local
+
+Requer Node.js 20.9 ou superior.
+
+```bash
+npm install
+cp .env.example .env.local
+npm run dev
+```
+
+Abra `http://localhost:3000`.
+
+## Variáveis de ambiente
+
+| Variável | Uso |
+| --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | URL canônica usada no SEO e no sitemap |
+| `NEXT_PUBLIC_FORMSPREE_ENDPOINT` | Endpoint que recebe o formulário de contato |
+| `NEXT_PUBLIC_GA_ID` | ID opcional do Google Analytics, como `G-XXXXXXXXXX` |
+
+Cadastre as mesmas variáveis em **Vercel > Project Settings > Environment Variables**.
+
+## Verificações
+
+```bash
+npm run lint
+npm run typecheck
+npm run build
+```
+
+## Publicação
+
+Importe este repositório na Vercel. O framework é detectado automaticamente como Next.js. Cada atualização na branch principal gera um novo deploy de produção.
 
 ## Estrutura
 
-```txt
-atlantico-studio-site/
-├── index.html
-├── style.css
-├── script.js
-├── video-test.html
-├── assets/
-│   ├── favicon/
-│   ├── images/
-│   ├── logo/
-│   └── video/
-└── README.md
-```
-
-## Versão v6
-
-Esta versão foi ajustada para usar vídeo real no fundo inteiro do site, incluindo o Hero inicial.
-
-O Hero não usa imagem como fundo. O background principal vem de um elemento `<video>` fixo no `index.html`.
-
-Principais ajustes:
-
-- Removido poster/imagem do Hero.
-- Removido fallback visual com imagem no CSS.
-- Background global em vídeo MP4.
-- Vídeo externo de oceano/ondas carregado por conexão direta.
-- Fallback local em MP4 caso o vídeo externo não carregue.
-- Botão discreto “Ativar vídeo” aparece apenas se o Safari bloquear autoplay.
-- CSS refeito sem blocos duplicados e sem media query escondendo vídeo.
-- Responsividade refinada para desktop, tablet e mobile.
-
-## Publicar no GitHub Pages
-
-1. Extraia o ZIP.
-2. Abra a pasta `atlantico-studio-site`.
-3. Envie todos os arquivos para o repositório.
-4. No GitHub, vá em **Settings > Pages**.
-5. Selecione a branch principal e a pasta `/root`.
-6. Aguarde a publicação.
-
-## Teste do vídeo
-
-Depois de publicar, abra:
-
-```txt
-/video-test.html
-```
-
-Essa página toca apenas o vídeo, com controles. Se ela tocar, o vídeo externo está carregando corretamente no navegador.
-
-## Cache no Safari
-
-Após substituir arquivos no GitHub Pages, use:
-
-```txt
-Option + Command + R
-```
-
-ou teste em uma janela privada.
-
-## Observação sobre a logo
-
-A pasta `assets/logo` contém a versão atual usada no projeto. Para trocar pela logo oficial final, substitua os arquivos mantendo os mesmos nomes:
-
-```txt
-assets/logo/logo-atlantico-studio.svg
-assets/logo/logo-atlantico-studio.png
-assets/logo/icon-atlantico.svg
-assets/logo/icon-atlantico.png
-assets/favicon/favicon.ico
-assets/favicon/favicon-32.png
-assets/favicon/apple-touch-icon.png
+```text
+src/
+├── app/          # páginas, SEO e estilos globais
+├── components/   # componentes de interface e comportamento
+└── data/         # conteúdo estruturado do site
+public/assets/    # imagens, logotipos, favicons e vídeos
+legacy-static/    # versão HTML anterior preservada para referência
 ```
