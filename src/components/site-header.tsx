@@ -72,7 +72,7 @@ export function SiteHeader() {
             </a>
           ))}
           <a className="nav-cta" href="#contato" onClick={closeMenu}>
-            Iniciar projeto <span aria-hidden="true">↗</span>
+            Quero mudar minha marca <span aria-hidden="true">↗</span>
           </a>
         </nav>
       </div>

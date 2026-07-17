@@ -7,11 +7,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://atlanticostudio.pt"
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "ATLÂNTICO STUDIO — Estratégia, design e presença digital",
+    default: "ATLÂNTICO STUDIO — Marcas que não passam despercebidas",
     template: "%s | ATLÂNTICO STUDIO",
   },
   description:
-    "Estratégia, branding, sites e campanhas para transformar marcas em presenças digitais relevantes, coerentes e prontas para crescer.",
+    "Posicionamento, identidade e experiências digitais para marcas que querem ser entendidas, lembradas e escolhidas.",
   keywords: [
     "branding",
     "marketing digital",
@@ -28,9 +28,8 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "/",
     siteName: "ATLÂNTICO STUDIO",
-    title: "ATLÂNTICO STUDIO — Estratégia, design e presença digital",
-    description:
-      "Entre existir e ser lembrada, uma marca precisa de direção.",
+    title: "ATLÂNTICO STUDIO — Marcas que não passam despercebidas",
+    description: "Sua marca é boa. O mercado está percebendo isso?",
     images: [
       {
         url: "/assets/images/ocean-waves-poster.jpg",
@@ -42,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "ATLÂNTICO STUDIO — Estratégia, design e presença digital",
-    description: "Direção criativa e digital para marcas que querem atravessar o comum.",
+    title: "ATLÂNTICO STUDIO — Marcas que não passam despercebidas",
+    description: "Posicionamento, identidade e digital para transformar percepção em escolha.",
     images: ["/assets/images/ocean-waves-poster.jpg"],
   },
   icons: {
