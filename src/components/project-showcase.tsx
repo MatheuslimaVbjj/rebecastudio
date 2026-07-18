@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { projects } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
 export function ProjectShowcase() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -11,7 +12,7 @@ export function ProjectShowcase() {
   return (
     <div className="project-showcase">
       <div className="project-stage" key={active.number}>
-        <Image src={active.image} alt={active.alt} fill sizes="(max-width: 900px) 100vw, 62vw" />
+        <Image src={assetPath(active.image)} alt={active.alt} fill sizes="(max-width: 900px) 100vw, 62vw" />
         <div className="project-stage-shade" />
         <div className="project-stage-copy">
           <span>{active.category}</span>
@@ -22,7 +23,7 @@ export function ProjectShowcase() {
         </div>
       </div>
 
-      <div className="project-controls" aria-label="Selecionar projeto conceitual">
+      <div className="project-controls" aria-label="Selecionar aplicação de projeto">
         {projects.map((project, index) => (
           <button
             key={project.number}

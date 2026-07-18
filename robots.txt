@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://matheuslimavbjj.github.io/rebecastudio
+Sitemap: https://matheuslimavbjj.github.io/rebecastudio/sitemap.xml

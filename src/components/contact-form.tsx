@@ -58,11 +58,11 @@ export function ContactForm() {
         <span>O que precisa mudar agora?</span>
         <select name="service" defaultValue="" required>
           <option value="" disabled>Escolha o ponto de partida</option>
-          <option>Minha marca parece genérica</option>
-          <option>Meu site não representa meu valor</option>
-          <option>Meu conteúdo não tem direção</option>
-          <option>Vou lançar uma nova oferta</option>
-          <option>Preciso repensar tudo junto</option>
+          <option>Eventos & credenciamento</option>
+          <option>Branding & identidade</option>
+          <option>Marketing & presença digital</option>
+          <option>Campanhas para marcas</option>
+          <option>Quero conectar tudo</option>
         </select>
       </label>
 

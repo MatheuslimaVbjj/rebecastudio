@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[22016,["/rebecastudio/_next/static/chunks/1el5-48au3iai.js","/rebecastudio/_next/static/chunks/14mrh2-p_w84d.js","/rebecastudio/_next/static/chunks/3xyt402c62511.js"],""]
+3:I[97367,["/rebecastudio/_next/static/chunks/1el5-48au3iai.js","/rebecastudio/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"status-page","children":["$","div",null,{"children":[["$","span",null,{"className":"status-code","children":"Erro 404"}],["$","h1",null,{"children":"Este caminho ficou para trás."}],["$","p",null,{"children":"A página que você procura não existe ou mudou de endereço."}],["$","$L2",null,{"className":"button button-gold","href":"/","children":["Voltar ao início ",["$","span",null,{"aria-hidden":"true","children":"↗"}]]}]]}]}],[["$","script","script-0",{"src":"/rebecastudio/_next/static/chunks/3xyt402c62511.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"7qFTYfygZNEngVr54AfbZ"}
+5:null

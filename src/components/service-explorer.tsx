@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { services } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
 export function ServiceExplorer() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -53,7 +54,7 @@ export function ServiceExplorer() {
           </a>
         </div>
         <div className="service-panel-visual">
-          <Image src={active.image} alt="" fill sizes="(max-width: 900px) 100vw, 42vw" />
+          <Image src={assetPath(active.image)} alt="" fill sizes="(max-width: 900px) 100vw, 42vw" />
           <span>{active.number}</span>
         </div>
       </div>

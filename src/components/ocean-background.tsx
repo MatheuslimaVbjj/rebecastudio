@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { assetPath } from "@/lib/paths";
 
 export function OceanBackground() {
   const [isReady, setIsReady] = useState(false);
@@ -25,6 +26,7 @@ export function OceanBackground() {
     <div
       className="ocean-background"
       ref={frameRef}
+      style={{ backgroundImage: `url("${assetPath("/assets/images/ocean-waves-poster.jpg")}")` }}
       onPointerMove={handlePointerMove}
       onPointerLeave={resetTilt}
     >
@@ -35,12 +37,12 @@ export function OceanBackground() {
         loop
         playsInline
         preload="metadata"
-        poster="/assets/images/ocean-waves-poster.jpg"
+        poster={assetPath("/assets/images/ocean-waves-poster.jpg")}
         tabIndex={-1}
         onCanPlay={() => setIsReady(true)}
       >
-        <source src="/assets/video/ocean-cinematic.mp4" type="video/mp4" media="(max-width: 767px)" />
-        <source src="/assets/video/ocean-waves-crashing-rocks.mp4" type="video/mp4" />
+        <source src={assetPath("/assets/video/ocean-cinematic.mp4")} type="video/mp4" media="(max-width: 767px)" />
+        <source src={assetPath("/assets/video/ocean-waves-crashing-rocks.mp4")} type="video/mp4" />
       </video>
       <div className="ocean-overlay" />
       <div className="visual-stamp">
@@ -49,7 +51,7 @@ export function OceanBackground() {
         <span>BR · PT</span>
       </div>
       <div className="visual-caption">
-        <span>Design em movimento</span>
+        <span>Do digital ao dia do evento</span>
         <i aria-hidden="true">↗</i>
       </div>
     </div>

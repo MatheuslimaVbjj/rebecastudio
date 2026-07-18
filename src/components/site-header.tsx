@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { navigation } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ export function SiteHeader() {
       <div className="shell header-inner">
         <a href="#inicio" className="brand" aria-label="ATLÂNTICO STUDIO — início">
           <Image
-            src="/assets/logo/logo-atlantico-studio.png"
+            src={assetPath("/assets/logo/logo-atlantico-studio.png")}
             alt=""
             width={52}
             height={52}
@@ -72,7 +73,7 @@ export function SiteHeader() {
             </a>
           ))}
           <a className="nav-cta" href="#contato" onClick={closeMenu}>
-            Quero mudar minha marca <span aria-hidden="true">↗</span>
+            Solicitar orçamento <span aria-hidden="true">↗</span>
           </a>
         </nav>
       </div>

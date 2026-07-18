@@ -1,5 +1,5 @@
 export const navigation = [
-  { label: "O que muda", href: "#transformacao" },
+  { label: "Atuação", href: "#transformacao" },
   { label: "Soluções", href: "#solucoes" },
   { label: "Projetos", href: "#projetos" },
   { label: "Processo", href: "#processo" },
@@ -8,46 +8,46 @@ export const navigation = [
 export const services = [
   {
     number: "01",
-    title: "Marca & posicionamento",
-    short: "Para parar de competir só por preço.",
-    headline: "Uma marca que explica por que você é a escolha certa.",
+    title: "Eventos & credenciamento",
+    short: "Para o evento funcionar tão bem quanto parece.",
+    headline: "Do primeiro convite ao último crachá, cada detalhe comunica valor.",
     description:
-      "Organizamos estratégia, discurso e identidade para que o mercado entenda seu valor antes mesmo da primeira conversa.",
-    deliverables: ["Estratégia de marca", "Identidade visual", "Tom de voz", "Direção criativa"],
-    image: "/assets/images/case-project-brand.svg",
+      "Planejamos a jornada, os materiais e a operação para feiras, workshops e premiações do setor de beleza acontecerem sem ruído — no digital e no local.",
+    deliverables: ["Planejamento do evento", "Inscrição e credenciamento", "Identidade e materiais", "Produção no dia"],
+    image: "/assets/images/photo-eventos.jpg",
     accent: "coral",
   },
   {
     number: "02",
-    title: "Sites que vendem valor",
-    short: "Para transformar visita em próxima ação.",
-    headline: "Um site bonito é pouco. Ele precisa conduzir decisões.",
+    title: "Branding & identidade",
+    short: "Para deixar de parecer só mais uma opção.",
+    headline: "Uma marca à altura do trabalho que salões e profissionais já entregam.",
     description:
-      "Desenhamos a jornada, escrevemos a mensagem e desenvolvemos a experiência para tornar sua oferta clara, desejável e simples de contratar.",
-    deliverables: ["Estratégia de conversão", "UX e UI", "Copy completa", "Desenvolvimento"],
-    image: "/assets/images/case-project-landing.svg",
+      "Transformamos posicionamento, discurso e direção visual em um sistema reconhecível, coerente e pronto para sustentar um novo patamar de percepção.",
+    deliverables: ["Estratégia de marca", "Identidade visual", "Tom de voz", "Direção criativa"],
+    image: "/assets/images/photo-identidade.jpg",
     accent: "aqua",
   },
   {
     number: "03",
-    title: "Conteúdo com direção",
-    short: "Para sair do calendário sem estratégia.",
-    headline: "Menos volume. Mais reconhecimento em cada publicação.",
+    title: "Marketing & presença digital",
+    short: "Para transformar atenção em agenda e oportunidade.",
+    headline: "Site, conteúdo e social trabalhando para a mesma decisão.",
     description:
-      "Criamos um sistema editorial que conecta assunto, estética e oferta para sua presença digital construir memória — não apenas alcance.",
-    deliverables: ["Pilares editoriais", "Sistema visual", "Roteiros", "Campanhas de conteúdo"],
-    image: "/assets/images/case-project-campaign.svg",
+      "Criamos jornadas digitais com mensagem clara, estética própria e próximos passos simples para salões, profissionais e eventos converterem interesse em conversa.",
+    deliverables: ["Sites e landing pages", "Conteúdo e social", "Copy de conversão", "Direção de ensaio"],
+    image: "/assets/images/photo-landing.jpg",
     accent: "lime",
   },
   {
     number: "04",
-    title: "Campanhas & lançamentos",
-    short: "Para colocar uma oferta em movimento.",
-    headline: "Da ideia ao clique, tudo falando a mesma língua.",
+    title: "Campanhas para marcas",
+    short: "Para chegar ao profissional certo com contexto.",
+    headline: "Uma campanha que conecta produto, educação e experiência.",
     description:
-      "Conectamos conceito, criativos, landing page e mídia para lançar com consistência e aprender rápido com a resposta do público.",
-    deliverables: ["Conceito de campanha", "Criativos", "Landing page", "Plano de ativação"],
-    image: "/assets/images/case-brand-mockup.svg",
+      "Unimos conceito, criativos, mídia e ativações para marcas de beleza entrarem na rotina de quem influencia a compra: o profissional.",
+    deliverables: ["Conceito de campanha", "Criativos e roteiros", "Landing page", "Plano de ativação"],
+    image: "/assets/images/photo-campanha.jpg",
     accent: "blue",
   },
 ] as const;
@@ -55,84 +55,92 @@ export const services = [
 export const projects = [
   {
     number: "01",
-    category: "Identidade & posicionamento",
-    title: "Uma presença visual capaz de sustentar um novo patamar de valor.",
-    image: "/assets/images/case-project-brand.svg",
-    alt: "Conceito de identidade visual desenvolvido pelo ATLÂNTICO STUDIO",
-    tags: ["Estratégia", "Brand system", "Direção de arte"],
+    category: "Eventos & operação",
+    title: "Credenciamento que organiza a chegada e já apresenta o padrão da marca.",
+    image: "/assets/images/photo-identidade.jpg",
+    alt: "Credenciais e materiais de identificação preparados para um evento",
+    tags: ["Inscrição", "Identificação", "Experiência"],
   },
   {
     number: "02",
-    category: "Experiência & conversão",
-    title: "Uma jornada digital que transforma complexidade em escolha simples.",
-    image: "/assets/images/case-project-landing.svg",
-    alt: "Conceito de experiência digital desenvolvido pelo ATLÂNTICO STUDIO",
-    tags: ["UX/UI", "Copy", "Desenvolvimento"],
+    category: "Presença digital",
+    title: "Uma landing page construída para transformar interesse em inscrição.",
+    image: "/assets/images/photo-landing.jpg",
+    alt: "Pessoa navegando em uma experiência digital",
+    tags: ["UX/UI", "Copy", "Conversão"],
   },
   {
     number: "03",
     category: "Campanha integrada",
-    title: "Uma ideia central desdobrada para gerar atenção, memória e ação.",
-    image: "/assets/images/case-project-campaign.svg",
-    alt: "Conceito de campanha desenvolvido pelo ATLÂNTICO STUDIO",
+    title: "Conteúdo, tráfego e ativação apontando para a mesma oferta.",
+    image: "/assets/images/photo-campanha.jpg",
+    alt: "Produção de conteúdo para campanha de beleza",
     tags: ["Conceito", "Conteúdo", "Performance"],
+  },
+  {
+    number: "04",
+    category: "Imagem & autoridade",
+    title: "Ensaios empresariais com direção para construir confiança antes da conversa.",
+    image: "/assets/images/photo-ensaios.jpg",
+    alt: "Ensaio fotográfico empresarial",
+    tags: ["Direção", "Fotografia", "Posicionamento"],
   },
 ] as const;
 
 export const processSteps = [
   {
     number: "01",
-    title: "Diagnóstico",
-    question: "O que o público percebe hoje?",
+    title: "Imersão",
+    question: "O que precisa acontecer — e para quem?",
     description:
-      "Entramos no negócio, na oferta e no contexto competitivo para encontrar o problema certo — antes de desenhar qualquer solução.",
-    output: "Mapa de percepção, oportunidades e prioridades do projeto.",
+      "Entramos no negócio, no público, no formato do evento ou na oferta para localizar prioridades, riscos e oportunidades reais.",
+    output: "Diagnóstico, escopo e mapa da jornada.",
   },
   {
     number: "02",
-    title: "Direção",
-    question: "Qual espaço a marca deve ocupar?",
+    title: "Estratégia",
+    question: "Qual ideia conecta todos os pontos?",
     description:
-      "Definimos a ideia central, a mensagem e os princípios visuais que vão orientar todas as decisões seguintes.",
-    output: "Estratégia aprovada e território criativo claro.",
+      "Definimos mensagem, cronograma, funil de inscrição ou venda e a direção que vai orientar digital, materiais e operação.",
+    output: "Plano aprovado e território criativo claro.",
   },
   {
     number: "03",
-    title: "Construção",
-    question: "Como isso ganha forma e interação?",
+    title: "Criação",
+    question: "Como isso ganha forma e desejo?",
     description:
-      "Transformamos a direção em identidade, conteúdo e experiência digital, testando cada detalhe no contexto real de uso.",
+      "Desenvolvemos identidade, site, conteúdo, campanhas e materiais físicos como partes da mesma experiência.",
     output: "Sistema completo, responsivo e pronto para operar.",
   },
   {
     number: "04",
-    title: "Movimento",
-    question: "Como a nova presença chega ao mundo?",
+    title: "Execução",
+    question: "Como a experiência funciona no mundo real?",
     description:
-      "Publicamos, medimos e refinamos os pontos críticos para que a marca não termine no lançamento: ela comece ali.",
-    output: "Lançamento acompanhado e próximos testes definidos.",
+      "Publicamos, testamos, acompanhamos inscrições, credenciamento e produção para ajustar o que importa enquanto ainda faz diferença.",
+    output: "Lançamento acompanhado e operação organizada.",
   },
 ] as const;
 
 export const faqs = [
   {
-    question: "Vocês trabalham com projetos no Brasil e em Portugal?",
+    question: "Vocês trabalham com eventos completos ou só comunicação?",
     answer:
-      "Sim. O processo foi desenhado para funcionar remotamente, com etapas, decisões e entregas bem documentadas.",
+      "Os dois. O escopo pode incluir estratégia, identidade, divulgação, inscrição, credenciamento e produção no dia, conforme a necessidade do evento.",
   },
   {
-    question: "Posso contratar apenas um site?",
+    question: "Atendem somente o setor de beleza?",
     answer:
-      "Pode. Antes de começar, verificamos se posicionamento e mensagem já estão claros. Quando não estão, recomendamos uma etapa estratégica curta para o site não nascer apenas bonito.",
+      "Beleza é o território de especialidade da ATLÂNTICO STUDIO — salões, profissionais, marcas, feiras, workshops e premiações. Projetos próximos a esse universo também podem ser avaliados.",
   },
   {
-    question: "Quanto tempo leva um projeto?",
+    question: "Vocês trabalham no Brasil e em Portugal?",
     answer:
-      "Depende do escopo. Landing pages costumam ser mais rápidas; projetos de marca e sites completos exigem uma imersão maior. O cronograma é fechado antes do início.",
+      "Sim. A estratégia e a criação funcionam remotamente, com processos documentados. A operação presencial é definida de acordo com a cidade e o formato do evento.",
   },
   {
-    question: "Vocês também cuidam de conteúdo e campanhas?",
+    question: "Posso contratar apenas branding, site ou campanha?",
     answer:
-      "Sim. Podemos criar o sistema de conteúdo, campanhas de lançamento e os desdobramentos digitais necessários para colocar a nova direção em movimento.",
+      "Pode. Antes de começar, verificamos quais fundamentos já estão claros para a entrega isolada não nascer desconectada do restante da marca.",
   },
 ];

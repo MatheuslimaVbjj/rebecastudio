@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ContactForm } from "@/components/contact-form";
 import { ExperienceLayer } from "@/components/experience-layer";
 import { OceanBackground } from "@/components/ocean-background";
@@ -8,8 +9,9 @@ import { ServiceExplorer } from "@/components/service-explorer";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { faqs } from "@/data/site";
+import { assetPath } from "@/lib/paths";
 
-const marqueeItems = ["Posicionamento", "Identidade", "Experiência digital", "Conteúdo", "Campanhas"];
+const marqueeItems = ["Eventos", "Credenciamento", "Branding", "Marketing", "Campanhas"];
 
 export default function HomePage() {
   return (
@@ -21,24 +23,24 @@ export default function HomePage() {
         <section className="hero" id="inicio">
           <div className="shell hero-layout">
             <Reveal className="hero-copy">
-              <span className="eyebrow">Estúdio de marca & experiência digital</span>
+              <span className="eyebrow">Marketing • Eventos • Branding para beleza</span>
               <h1>
-                Sua marca é boa.<br />
-                <em>O mercado percebe?</em>
+                Entre ser vista e ser escolhida<br />
+                <em>existe uma experiência inteira.</em>
               </h1>
               <p>
-                Nós transformamos estratégia, identidade e digital em uma presença impossível de confundir — e fácil de escolher.
+                A ATLÂNTICO conecta branding, presença digital e produção de eventos para salões, profissionais e marcas de beleza no Brasil e em Portugal.
               </p>
               <div className="hero-actions">
                 <a className="button button-primary" href="#contato">
-                  Quero reposicionar minha marca <span aria-hidden="true">↗</span>
+                  Planejar meu próximo movimento <span aria-hidden="true">↗</span>
                 </a>
-                <a className="button button-ghost" href="#transformacao">
-                  Entender o que muda <span aria-hidden="true">↓</span>
+                <a className="button button-ghost" href="#solucoes">
+                  Explorar as soluções <span aria-hidden="true">↓</span>
                 </a>
               </div>
               <div className="hero-proof">
-                <span>Estratégia</span><i>+</i><span>Design</span><i>+</i><span>Tecnologia</span>
+                <span>Salões</span><i>+</i><span>Profissionais</span><i>+</i><span>Marcas de beleza</span>
               </div>
             </Reveal>
 
@@ -49,8 +51,8 @@ export default function HomePage() {
                 <strong>BR ↔ PT</strong>
               </div>
               <div className="floating-card card-bottom">
-                <small>Foco</small>
-                <strong>Percepção → escolha</strong>
+                <small>Do digital ao presencial</small>
+                <strong>Campanha → evento</strong>
               </div>
             </Reveal>
           </div>
@@ -67,13 +69,13 @@ export default function HomePage() {
         <section className="manifesto" id="transformacao">
           <div className="shell manifesto-grid">
             <Reveal className="manifesto-label">
-              <span>O problema real</span>
+              <span>Uma única percepção</span>
               <i aria-hidden="true">01</i>
             </Reveal>
             <Reveal className="manifesto-copy" delay={80}>
-              <h2>Você não precisa aparecer mais. Precisa ser <em>entendido mais rápido.</em></h2>
+              <h2>Seu público não separa o post, o site e o evento. Ele sente se tudo pertence à <em>mesma marca.</em></h2>
               <p>
-                Quando marca, mensagem e experiência não apontam para o mesmo lugar, o público hesita. Nós eliminamos essa distância entre o valor que você entrega e o valor que as pessoas percebem.
+                A ATLÂNTICO atua exatamente nessa conexão: cria a direção, transforma em comunicação e leva a mesma experiência até a operação no dia do evento.
               </p>
               <a className="inline-cta light" href="#solucoes">
                 Ver como resolvemos <span aria-hidden="true">↘</span>
@@ -84,14 +86,14 @@ export default function HomePage() {
           <div className="shell shift-grid">
             <Reveal className="shift-card" delay={0}>
               <span>Antes</span>
-              <h3>“Fazemos de tudo um pouco.”</h3>
-              <p>Oferta ampla, discurso parecido com o mercado e uma estética que não cria memória.</p>
+              <h3>“Cada fornecedor cuida de uma parte.”</h3>
+              <p>Divulgação, inscrição, materiais e evento parecem iniciativas diferentes — e a equipe precisa costurar tudo na última hora.</p>
             </Reveal>
             <Reveal className="shift-arrow" delay={70}><span aria-hidden="true">→</span></Reveal>
             <Reveal className="shift-card is-after" delay={140}>
               <span>Depois</span>
-              <h3>“É exatamente disso que eu preciso.”</h3>
-              <p>Posição clara, linguagem própria e uma jornada que conduz naturalmente à próxima ação.</p>
+              <h3>“Tudo fala a mesma língua.”</h3>
+              <p>Uma direção central conecta marca, campanha, inscrição, credenciamento e experiência presencial.</p>
             </Reveal>
           </div>
         </section>
@@ -101,11 +103,37 @@ export default function HomePage() {
             <Reveal className="section-intro split-intro">
               <div>
                 <span className="section-kicker">02 · Soluções</span>
-                <h2>Escolha o ponto de partida. Nós conectamos o resto.</h2>
+                <h2>Da marca ao credenciamento. Escolha onde começamos.</h2>
               </div>
-              <p>Clique em cada solução e veja como ela muda a percepção da marca na prática.</p>
+              <p>Clique em cada solução para ver o que entregamos e como as frentes se conectam.</p>
             </Reveal>
             <Reveal delay={100}><ServiceExplorer /></Reveal>
+          </div>
+        </section>
+
+        <section className="field-notes-section" aria-label="Atuação da ATLÂNTICO STUDIO">
+          <div className="shell field-notes-heading">
+            <Reveal>
+              <span className="section-kicker">Trabalho no mundo real</span>
+              <h2>Estratégia na tela. Organização na chegada. Presença em cada detalhe.</h2>
+            </Reveal>
+            <Reveal delay={80}>
+              <p>Uma amostra dos pontos de contato que conectamos para a experiência não terminar no layout.</p>
+            </Reveal>
+          </div>
+          <div className="shell field-notes-grid">
+            <Reveal className="field-note field-note-tall">
+              <Image src={assetPath("/assets/images/photo-identidade.jpg")} alt="Identificação e credenciamento de evento" fill sizes="(max-width: 760px) 100vw, 38vw" />
+              <span>Credenciamento & identificação</span>
+            </Reveal>
+            <Reveal className="field-note" delay={70}>
+              <Image src={assetPath("/assets/images/photo-eventos.jpg")} alt="Produção de evento para o setor de beleza" fill sizes="(max-width: 760px) 100vw, 31vw" />
+              <span>Produção & experiência</span>
+            </Reveal>
+            <Reveal className="field-note" delay={140}>
+              <Image src={assetPath("/assets/images/photo-ensaios.jpg")} alt="Ensaio empresarial com direção criativa" fill sizes="(max-width: 760px) 100vw, 31vw" />
+              <span>Imagem & autoridade</span>
+            </Reveal>
           </div>
         </section>
 
@@ -113,20 +141,20 @@ export default function HomePage() {
           <div className="shell outcomes-grid">
             <Reveal className="outcome-lead">
               <span className="section-kicker">O efeito</span>
-              <h2>Da atenção solta à percepção que fica.</h2>
-              <p>Não vendemos peças isoladas. Construímos um sistema em que cada contato reforça a mesma ideia.</p>
+              <h2>Da divulgação solta a uma experiência que sustenta valor.</h2>
+              <p>Não entregamos peças desconectadas. Construímos uma jornada em que cada contato prepara o próximo.</p>
             </Reveal>
             <Reveal className="outcome-card outcome-a" delay={60}>
-              <span>01</span><strong>Clareza</strong><p>O público entende rápido o que você faz e por que isso importa.</p>
+              <span>01</span><strong>Autoridade</strong><p>A marca parece tão preparada quanto a entrega que existe por trás dela.</p>
             </Reveal>
             <Reveal className="outcome-card outcome-b" delay={120}>
-              <span>02</span><strong>Coerência</strong><p>Site, conteúdo e campanha deixam de parecer negócios diferentes.</p>
+              <span>02</span><strong>Organização</strong><p>Inscrição, materiais e operação deixam de depender de improviso.</p>
             </Reveal>
             <Reveal className="outcome-card outcome-c" delay={180}>
-              <span>03</span><strong>Desejo</strong><p>A forma de apresentar passa a sustentar o valor da oferta.</p>
+              <span>03</span><strong>Desejo</strong><p>Conteúdo e campanha fazem o público querer participar antes do evento começar.</p>
             </Reveal>
             <Reveal className="outcome-card outcome-d" delay={240}>
-              <span>04</span><strong>Movimento</strong><p>As pessoas sabem exatamente qual é o próximo passo.</p>
+              <span>04</span><strong>Conversão</strong><p>As pessoas entendem a proposta e sabem exatamente como avançar.</p>
             </Reveal>
           </div>
         </section>
@@ -134,9 +162,9 @@ export default function HomePage() {
         <section className="section projects-section" id="projetos">
           <div className="shell">
             <Reveal className="section-intro projects-intro">
-              <span className="section-kicker">03 · Direções de projeto</span>
-              <h2>Não é sobre escolher um estilo. É sobre construir uma resposta.</h2>
-              <p>Explore os conceitos abaixo. Cada direção nasce de um problema diferente — e aponta para um comportamento desejado.</p>
+              <span className="section-kicker">03 · Aplicações</span>
+              <h2>O mesmo padrão, do credenciamento à campanha.</h2>
+              <p>Explore frentes que podem ser contratadas separadamente ou construídas como uma experiência integrada.</p>
             </Reveal>
             <Reveal delay={100}><ProjectShowcase /></Reveal>
           </div>
@@ -159,13 +187,13 @@ export default function HomePage() {
           <div className="shell fit-grid">
             <Reveal className="fit-copy">
               <span className="section-kicker">Antes de conversar</span>
-              <h2>Nosso melhor trabalho acontece com marcas dispostas a mudar de verdade.</h2>
-              <a className="button button-lime" href="#contato">É o meu momento <span aria-hidden="true">↗</span></a>
+              <h2>Seu próximo lançamento ou evento não precisa ser montado no improviso.</h2>
+              <a className="button button-lime" href="#contato">Planejar com direção <span aria-hidden="true">↗</span></a>
             </Reveal>
             <Reveal className="fit-list" delay={120}>
-              <div><span>✓</span><p>Você sente que a entrega é melhor do que a imagem atual comunica.</p></div>
-              <div><span>✓</span><p>Quer uma direção própria, não uma cópia do que já funciona no setor.</p></div>
-              <div><span>✓</span><p>Está preparado para decidir, participar e colocar a nova presença em movimento.</p></div>
+              <div><span>✓</span><p>Você precisa alinhar marca, divulgação e operação em uma única direção.</p></div>
+              <div><span>✓</span><p>Quer elevar a percepção de um salão, profissional, feira ou marca de beleza.</p></div>
+              <div><span>✓</span><p>Prefere decisões documentadas e uma equipe acompanhando a execução.</p></div>
             </Reveal>
           </div>
         </section>
@@ -193,8 +221,8 @@ export default function HomePage() {
           <div className="shell contact-grid">
             <Reveal className="contact-copy">
               <span className="section-kicker">06 · Próximo movimento</span>
-              <h2>Se a marca mudou por dentro, está na hora de mostrar por fora.</h2>
-              <p>Conte o que está acontecendo agora. Nós retornamos com perguntas, possibilidades e um próximo passo claro.</p>
+              <h2>Qual é o próximo movimento da sua marca?</h2>
+              <p>Conte se você está preparando um evento, reposicionando o negócio ou lançando uma campanha. Nós retornamos com perguntas e um próximo passo claro.</p>
               <div className="contact-direct">
                 <span>Prefere ir direto ao ponto?</span>
                 <a href="mailto:contato@atlanticostudio.com">contato@atlanticostudio.com ↗</a>
